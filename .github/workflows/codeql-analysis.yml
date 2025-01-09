@@ -38,7 +38,7 @@ jobs:
               libxkbfile-dev qt6-base-dev qt6-tools-dev \
               libgtk-3-dev libgtest-dev libgmock-dev libpugixml-dev \
               libei-dev libportal-dev libtomlplusplus-dev libcli11-dev
-        cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+        cmake -S . -B build --config Release --target packag -DPACKAGE_VERSION_LABEL=1.18.0
         cmake --build build
     - name: Free disk space
       run: |
